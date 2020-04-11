@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+	
+
+<head>
+	 <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+	  <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+	
+
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+
+	<a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;" >
+		
+		<a-assets>
+
+
+			<a-asset-item id="camaron" src="./Assets/scene.gltf">
+
+			</a-asset-item>
+	
+
+		</a-assets>
+
+		<a-marker preset="hiro">
+
+			<a-entity animation-mixer gltf-model="#camaron" scale=".01 .01 .01">
+				
+
+			</a-entity>
+	
+		</a-marker>
+
+		<a-entity camera>
+			
+		</a-entity>
+
+
+
+	</a-scene>
+
+	
+
+</body>
+
+
+</html>
